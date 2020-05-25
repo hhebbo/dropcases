@@ -1,12 +1,14 @@
 {
-  "name": "Start on Heroku: Go",
-  "description": "Go Getting Started Example App",
+  "name": "DropCases",
+  "description": "A sample Go application to showcase Dropbox's and HelloSign's APIs.",
   "keywords": [
-    "getting-started",
+    "DropCases",
+    "Dropbox",
+    "HelloSign",
     "go",
     "sample",
-    "example"
+    "API"
   ],
-  "website": "http://github.com/heroku/go-getting-started",
-  "repository": "http://github.com/heroku/go-getting-started"
+  "website": "https://dropcases.herokuapp.com",
+  "repository": "http://github.com/hhebbo/dropcases"
 }
