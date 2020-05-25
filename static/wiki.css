@@ -1,0 +1,79 @@
+.page-container {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-area {
+  position: fixed;
+  width: 20vw;
+  height: 100vh;
+  background:#0f287f;
+
+}
+
+.title {
+  position: relative; 
+  height: 15vh;
+  line-height: 15vh;
+  text-align: center;
+  font-size: 2.2em;
+  color: #dff7fe;
+  border-bottom: solid 1px #dff7fe;
+}
+
+.nav-items {
+  position: relative; 
+  height: 80vh;
+  margin-top: 5vh;
+}
+
+.nav-section {
+  position: relative; 
+  display: block;
+  width: 90%;
+  height: 5vh;
+  line-height: 5vh;
+  padding-left: 10%;
+  list-style: none;
+  text-align: left;
+  font-size: 1.5em;
+  color: #dff7fe;
+}
+
+.nav-page {
+  list-style: none;
+}
+
+.nav-page-link {
+  position: relative; 
+  display: inline-block;
+  width: 80%;
+  height: 5vh;
+  line-height: 5vh;
+  padding-left: 20%;
+  text-align: left;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #dff7fe;
+}
+
+ .nav-page-link:hover {
+  color: #0f287f;
+  background-color: #fff;
+  cursor: pointer;
+ }
+
+ .content-area {
+  position: relative; 
+  width: 80vw;
+  height: 100vh; 
+  margin-left: 20vw;
+ }
+
+ .content {
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
+  margin-left: 10%;
+  border: none;
+ }

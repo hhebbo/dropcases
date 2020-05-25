@@ -1,5 +1,7 @@
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="/static/wiki.css" />
+
     <script type="text/javascript">
       function newSource() {
        var e = document.getElementById("MySelectMenu");
@@ -9,94 +11,32 @@
      </script>
   </head>
 
-  <body style="margin: 0;">
-    <div style="
-      position: fixed; 
-      width: 20vw; 
-      height: 100vh; 
-      background:#0f287f;
-      font-family: Arial, Helvetica, sans-serif;
-    ">
-
-      <div style="
-        position: relative; 
-        width: 100%; 
-        height: 15vh;
-        line-height: 15vh;
-        text-align: center;
-        font-size: 2.5em;
-        color: #ddd;
-        border-bottom: solid 1px #ddd;
-        /* background-color: red; */
-      ">
-      Paper Wiki
+  <body class="page-container">
+    <div class="side-area">
+      <div class="title">
+        Paper Wiki
       </div>
 
-      <div style="
-        position: relative; 
-        width: 100%; 
-        height: 80vh;
-        margin-top: 5vh;
-        /* background:green; */
-      ">
-        {{ range .navFilesFolders }}
+      <div class="nav-items">
+        {{ range .nav }}
           {{ if eq .Type "folder" }}
-            <li style="
-              position: relative; 
-              display: block;
-              width: 90%; 
-              height: 5vh;
-              padding-left: 10%;
-              /* background:green; */
-              list-style: none;
-              text-align: left;
-              font-size: 1.5em;
-              color: #ddd;
-            ">
+            <li class="nav-section">
               {{ .Name }}
             </li>
           {{ else }}
-            <li style="
-              position: relative; 
-              display: block;
-              width: 80%; 
-              height: 5vh;
-              padding-left: 20%;
-              list-style: none;
-              text-align: left;
-              font-size: 1.3em;
-            ">
-              <a href={{ .Url }}
-
-                style="
-                text-decoration: none;
-                color: #ddd;
-              ">
+            <li class="nav-page">
+              <a href={{ .Url }} class="nav-page-link">
                 {{ .Name }}
               </a>
             </li>
           {{ end }}
         {{ end }}
       </div>
-
     </div>
 
-    <div style="
-      position: relative; 
-      width: 80vw; 
-      height: 100vh; 
-      margin-left: 20vw;
-      font-family: Arial, Helvetica, sans-serif;
-    ">
-      <iframe name="wiki-page"
-      style="
-        width: 800%;
-        height: 90%;
-        margin-top: 5%;
-        margin-left: 10%;
-        border: none;
-      "
-      srcdoc={{ .wikiContent }}
+    <div class="content-area">
+      <iframe name="wiki-page" class="content"
+      srcdoc={{ .content }}
       ></iframe>
     </div>
 

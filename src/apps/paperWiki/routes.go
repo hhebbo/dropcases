@@ -20,7 +20,7 @@ func getRoutes(router *gin.Engine) *gin.Engine {
 			http.StatusOK,
 			"wiki.tmpl.html",
 			gin.H{
-				"navFilesFolders": nav,
+				"nav": nav,
 			},
 		)
 	})
@@ -33,8 +33,8 @@ func getRoutes(router *gin.Engine) *gin.Engine {
 			http.StatusOK,
 			"wiki.tmpl.html",
 			gin.H{
-				"navFilesFolders": nav,
-				"wikiContent":     content,
+				"nav":     nav,
+				"content": content,
 			},
 		)
 	})
