@@ -2,7 +2,7 @@ package paperWiki
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/heroku/go-getting-started/src/packages/resources/dropbox/endUser/fileFolder"
+	"github.com/hhebbo/dropcases/src/packages/resources/dropbox/endUser/fileFolder"
 )
 
 func GetRoutes(router *gin.Engine) *gin.Engine {

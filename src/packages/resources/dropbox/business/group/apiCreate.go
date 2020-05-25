@@ -3,7 +3,7 @@ package group
 import (
 	"encoding/json"
 
-	"github.com/heroku/go-getting-started/src/packages/core/api"
+	"github.com/hhebbo/dropcases/src/packages/core/api"
 )
 
 const urlCreate = "https://api.dropboxapi.com/2/team/groups/create"

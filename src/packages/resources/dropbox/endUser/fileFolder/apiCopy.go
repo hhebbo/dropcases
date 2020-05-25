@@ -3,7 +3,7 @@ package fileFolder
 import (
 	"encoding/json"
 
-	"github.com/heroku/go-getting-started/src/packages/core/api"
+	"github.com/hhebbo/dropcases/src/packages/core/api"
 )
 
 const urlCopy = "https://api.dropboxapi.com/2/files/copy_v2"

@@ -3,9 +3,9 @@ package paperWiki
 import (
 	"strings"
 
-	"github.com/heroku/go-getting-started/src/apps/appConfig"
-	"github.com/heroku/go-getting-started/src/packages/core/config"
-	"github.com/heroku/go-getting-started/src/packages/resources/dropbox/endUser/fileFolder"
+	"github.com/hhebbo/dropcases/src/apps/appConfig"
+	"github.com/hhebbo/dropcases/src/packages/core/config"
+	"github.com/hhebbo/dropcases/src/packages/resources/dropbox/endUser/fileFolder"
 )
 
 func getNavSectionsAndPages(path string) ([]fileFolder.FileFolder, []fileFolder.FileFolder) {

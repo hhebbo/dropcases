@@ -1,8 +1,6 @@
 package fileFolder
 
-import (
-	"github.com/heroku/go-getting-started/src/packages/core/api"
-)
+import "github.com/hhebbo/dropcases/src/packages/core/api"
 
 const urlFileContent = "https://content.dropboxapi.com/2/files/export"
 

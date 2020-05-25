@@ -6,12 +6,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const (
-	MAIN_URL       = "/paper-wiki"
-	PAGE_URL       = "/page"
-	ROOT_WIKI_PATH = "/Paper Wiki"
-)
-
 func getRoutes(router *gin.Engine) *gin.Engine {
 	router.GET(MAIN_URL, func(c *gin.Context) {
 		nav := GetNav(ROOT_WIKI_PATH)

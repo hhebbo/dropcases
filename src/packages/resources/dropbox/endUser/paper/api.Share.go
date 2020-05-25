@@ -1,8 +1,6 @@
 package paper
 
-import (
-	"github.com/heroku/go-getting-started/src/packages/core/api"
-)
+import "github.com/hhebbo/dropcases/src/packages/core/api"
 
 const urlAddMember = "https://api.dropboxapi.com/2/paper/docs/users/add"
 

@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/heroku/go-getting-started/src/apps/appConfig"
-	"github.com/heroku/go-getting-started/src/packages/core/config"
+	"github.com/hhebbo/dropcases/src/apps/appConfig"
+	"github.com/hhebbo/dropcases/src/packages/core/config"
 )
 
 func getToken(authType string) string {

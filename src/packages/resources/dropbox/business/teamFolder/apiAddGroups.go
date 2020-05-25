@@ -3,7 +3,7 @@ package teamFolder
 import (
 	"encoding/json"
 
-	"github.com/heroku/go-getting-started/src/packages/core/api"
+	"github.com/hhebbo/dropcases/src/packages/core/api"
 )
 
 const urlAddGroup = "https://api.dropboxapi.com/2/sharing/add_folder_member"

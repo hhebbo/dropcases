@@ -35,6 +35,8 @@ github.com/gorilla/sessions v1.2.0 h1:S7P+1Hm5V/AT9cjEcUD5uDaQSX0OE577aCXgoaKpYb
 github.com/gorilla/sessions v1.2.0/go.mod h1:dk2InVEVJ0sfLlnXv9EAgkf6ecYs/i80K/zI+bUmuGM=
 github.com/gosimple/slug v1.9.0 h1:r5vDcYrFz9BmfIAMC829un9hq7hKM4cHUrsv36LbEqs=
 github.com/gosimple/slug v1.9.0/go.mod h1:AMZ+sOVe65uByN3kgEyf9WEBKBCSS+dJjMX9x4vDJbg=
+github.com/heroku/go-getting-started v0.0.0-20190906193407-877286762ee2 h1:Dx5SqCri99/Kh0fOEflo4/UMeHCP2tKb2hTUGAwl/LY=
+github.com/heroku/go-getting-started v0.0.0-20190906193407-877286762ee2/go.mod h1:SNlMHD4JtlngeuYGXol17FSPNiFwVhfm69JsJCvhP3E=
 github.com/heroku/x v0.0.0-20171004170240-705849e307dd h1:zn29UrzyUeQgqxBGXIwQqQJf75IiK4aeCtO5q1V2Vyo=
 github.com/heroku/x v0.0.0-20171004170240-705849e307dd/go.mod h1:opmAyjmIGn9/Y+9Nia6eIaktIXIoMhhFXEFbHLMsX3Y=
 github.com/jinzhu/configor v1.2.0 h1:u78Jsrxw2+3sGbGMgpY64ObKU4xWCNmNRJIjGVqxYQA=
