@@ -3,7 +3,7 @@ This is a sample Go application to showcase Dropbox's and HelloSign's APIs.
 There is currently the following use case:
 - Paper Wiki
 
-# Requirements to get it running
+## Requirements to get it running
 The demo is built using Go. To get the demo running you need:
 - Hosting server running a Unix-based OS
 - Go v1.12+
@@ -11,7 +11,7 @@ The demo is built using Go. To get the demo running you need:
 - A Dropbox Business API app with `Team member file access` token
 - Define and have access to an internally-open URL to be used for the wiki
 
-# Installation
+## Installation
 - Clone the repo `git clone git@github.com:hhebbo/dropcases.git`
 - Configure your app by adding your tokens, team admin member ID, and port environment variables. The name of these variable can be found in /apps/appConfig/appConfig.go
 - On the root folder of the project run `go run main.go`
