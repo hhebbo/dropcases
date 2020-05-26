@@ -30,4 +30,4 @@ Paper Wiki in this use case can be built as a folder and Paper docs structure wi
 3. Add Paper docs inside these folders. These Paper docs are the `pages` inside your wiki. The name of the Paper doc is the name of the page.
 
 ###  Where can I see a demo
-Here is a link to the demo
+Here is a link to [the demo](https://dropcases.herokuapp.com/paper-wiki)
