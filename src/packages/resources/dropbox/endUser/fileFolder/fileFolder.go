@@ -18,7 +18,7 @@ func Copy(from string, to string, allowSharedFolder bool, autorename bool, allow
 	return fileFolder
 }
 
-func List(path string, adminMemberTeamId string) []FileFolder {
+func List(path string, adminMemberTeamId string) ([]FileFolder, string) {
 	return list(path, adminMemberTeamId)
 }
 

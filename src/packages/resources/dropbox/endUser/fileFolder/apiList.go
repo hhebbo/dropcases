@@ -20,14 +20,15 @@ type requestParamsList struct {
 
 type responseList struct {
 	FileFolders []FileFolder `json:"entries"`
+	Cursor      string       `json:"cursor"`
 }
 
-func list(path string, adminMemberTeamId string) []FileFolder {
+func list(path string, adminMemberTeamId string) ([]FileFolder, string) {
 	requestParams := requestParamsList{path, true, true, false, true, true, true}
 	rawResponse := api.SendRequestToEndUserApiAsAdmin(urlList, requestParams, api.AuthTypeFiles, adminMemberTeamId, false)
 
 	var response responseList
 	json.Unmarshal(rawResponse, &response)
 
-	return response.FileFolders
+	return response.FileFolders, response.Cursor
 }

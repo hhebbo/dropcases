@@ -1,20 +1,25 @@
 package paperWiki
 
 import (
+	"fmt"
+	"strconv"
 	"strings"
 
 	"github.com/hhebbo/dropcases/src/apps/appConfig"
 	"github.com/hhebbo/dropcases/src/packages/core/config"
+	"github.com/hhebbo/dropcases/src/packages/core/fileCache"
 	"github.com/hhebbo/dropcases/src/packages/resources/dropbox/endUser/fileFolder"
+)
+
+const (
+	FILECACHE_PATH = "paperWiki/folderListCursor.txt"
 )
 
 func getNavSectionsAndPages(path string) ([]fileFolder.FileFolder, []fileFolder.FileFolder) {
 	var sections []fileFolder.FileFolder
 	var pages []fileFolder.FileFolder
 
-	adminMemberId := config.GetValue(appConfig.DROPCASES_ADMIN_MEMBER_ID)
-	filesFolders := fileFolder.List(path, adminMemberId)
-	// filesFolders := fileFolder.ListContinue("AAFyIsmDJHV3kHDsNON7KVaxybb2VPPMEdi6V7508pg9OxGF9v7lVM0TyzelsEgIPmXHAFfHx3t1d9qAL-AEWGF9sceRXPC1rFTNBtbK3-QqcbaHF3OYS5HlOGWXX6TyHnNK5u5d18hnW9Zc1FbDFzoiJ8yQgUTwhfOjeRQR1Y4mh6mlUOTHl137j6Mchkl1VDazNRfBKoVKqg1BDb08d2butF-mIO-t5UzpyQ1xk8zAJr1LHatNWmt07NWEk1HZTRo", adminMemberId)
+	filesFolders := getFilesFolders(path)
 
 	i := 1
 	for _, f := range filesFolders[1:] {
@@ -55,4 +60,22 @@ func getPageContent(docId string) string {
 	content := fileFolder.GetFileContent(docId, adminMemberId)
 
 	return content
+}
+
+func getFilesFolders(path string) []fileFolder.FileFolder {
+	adminMemberId := config.GetValue(appConfig.DROPCASES_ADMIN_MEMBER_ID)
+
+	fmt.Println(strconv.FormatBool(fileCache.Exists(FILECACHE_PATH)))
+
+	var filesFolders []fileFolder.FileFolder
+	var cursor string
+	if !fileCache.Exists(FILECACHE_PATH) {
+		filesFolders, cursor = fileFolder.List(path, adminMemberId)
+		fileCache.Save(FILECACHE_PATH, cursor)
+	} else {
+		cursor = fileCache.Get(FILECACHE_PATH)
+	}
+	filesFolders = fileFolder.ListContinue(cursor, adminMemberId)
+
+	return filesFolders
 }
