@@ -22,6 +22,10 @@ func List(path string, adminMemberTeamId string) []FileFolder {
 	return list(path, adminMemberTeamId)
 }
 
+func ListContinue(cursor string, adminMemberTeamId string) []FileFolder {
+	return listContinue(cursor, adminMemberTeamId)
+}
+
 func GetFileContent(id string, userMemberTeamId string) string {
 	return getFileContent(id, userMemberTeamId)
 }
