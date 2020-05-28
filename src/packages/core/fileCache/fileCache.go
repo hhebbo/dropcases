@@ -6,11 +6,12 @@ import (
 )
 
 const (
-	FILECACHE_PATH = "storage/fileCache/"
+	FILECACHE_ROOT_PATH    = "storage/fileCache/"
+	FILECACHE_WRITING_MODE = 0644
 )
 
 func Get(filePath string) string {
-	value, err := ioutil.ReadFile(FILECACHE_PATH + filePath)
+	value, err := ioutil.ReadFile(FILECACHE_ROOT_PATH + filePath)
 	if err != nil {
 		panic(err)
 	}
@@ -19,19 +20,18 @@ func Get(filePath string) string {
 }
 
 func Save(filePath string, value string) {
-	err := ioutil.WriteFile(FILECACHE_PATH+filePath, []byte(value), 0644)
+	err := ioutil.WriteFile(FILECACHE_ROOT_PATH+filePath, []byte(value), FILECACHE_WRITING_MODE)
 	if err != nil {
 		panic(err)
 	}
 }
 
-func Exists(filePath string) bool {
-	if _, err := os.Stat(FILECACHE_PATH + filePath); err == nil {
-		value := Get(filePath)
-		if value != "" {
-			return true
-		}
+func DirectoryExistsOrCreate(path string) bool {
+	if _, err := os.Stat(FILECACHE_ROOT_PATH + path); os.IsNotExist(err) {
+		os.MkdirAll(FILECACHE_ROOT_PATH+path, os.ModePerm)
+
+		return false
 	}
 
-	return false
+	return true
 }

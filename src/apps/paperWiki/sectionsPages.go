@@ -10,7 +10,8 @@ import (
 )
 
 const (
-	FILECACHE_PATH = "paperWiki/folderListCursor.txt"
+	FILECACHE_DIRECTORY = "paperWiki/"
+	FILECACHE_FILENAME  = "fileFolderListCursor.txt"
 )
 
 func getNavSectionsAndPages(path string) ([]fileFolder.FileFolder, []fileFolder.FileFolder) {
@@ -65,11 +66,11 @@ func getFilesFolders(path string) []fileFolder.FileFolder {
 
 	var filesFolders []fileFolder.FileFolder
 	var cursor string
-	if !fileCache.Exists(FILECACHE_PATH) {
+	if !fileCache.DirectoryExistsOrCreate(FILECACHE_DIRECTORY) {
 		filesFolders, cursor = fileFolder.List(path, adminMemberId)
-		fileCache.Save(FILECACHE_PATH, cursor)
+		fileCache.Save(FILECACHE_DIRECTORY+FILECACHE_FILENAME, cursor)
 	} else {
-		cursor = fileCache.Get(FILECACHE_PATH)
+		cursor = fileCache.Get(FILECACHE_DIRECTORY + FILECACHE_FILENAME)
 	}
 	filesFolders = fileFolder.ListContinue(cursor, adminMemberId)
 
