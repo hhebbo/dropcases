@@ -1,8 +1,6 @@
 package paperWiki
 
 import (
-	"fmt"
-	"strconv"
 	"strings"
 
 	"github.com/hhebbo/dropcases/src/apps/appConfig"
@@ -64,8 +62,6 @@ func getPageContent(docId string) string {
 
 func getFilesFolders(path string) []fileFolder.FileFolder {
 	adminMemberId := config.GetValue(appConfig.DROPCASES_ADMIN_MEMBER_ID)
-
-	fmt.Println(strconv.FormatBool(fileCache.Exists(FILECACHE_PATH)))
 
 	var filesFolders []fileFolder.FileFolder
 	var cursor string

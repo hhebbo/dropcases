@@ -27,7 +27,10 @@ func Save(filePath string, value string) {
 
 func Exists(filePath string) bool {
 	if _, err := os.Stat(FILECACHE_PATH + filePath); err == nil {
-		return true
+		value := Get(filePath)
+		if value != "" {
+			return true
+		}
 	}
 
 	return false
