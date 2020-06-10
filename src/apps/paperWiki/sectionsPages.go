@@ -20,8 +20,8 @@ func getNavSectionsAndPages(path string) ([]fileFolder.FileFolder, []fileFolder.
 
 	filesFolders := getFilesFolders(path)
 
-	i := 1
-	for _, f := range filesFolders[1:] {
+	i := 0
+	for _, f := range filesFolders[0:] {
 		if f.Type == fileFolder.FileFolderTypeFolder {
 			sections = append(sections, filesFolders[i])
 		}
