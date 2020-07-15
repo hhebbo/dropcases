@@ -1,0 +1,93 @@
+.page-container {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-area {
+  position: fixed;
+  width: 15vw;
+  height: 100vh;
+  background:#f2f2f2;
+
+}
+
+.title {
+  position: relative; 
+  height: 10vh;
+  line-height: 15vh;
+  text-align: center;
+  font-size: 2.2em;
+  color: #dff7fe;
+  border-bottom: solid 1px #dff7fe;
+}
+
+.logo {
+  padding-top: 15%;
+  padding-left: 15%;
+  fill: #0d2481;
+}
+
+.nav-items {
+  position: relative; 
+  height: 80vh;
+  margin-top: 2vh;
+}
+
+.nav-section-title {
+  position: relative; 
+  display: block;
+  width: 90%;
+  height: 8.5vh;
+  line-height: 8.5vh;
+  padding-left: 15%;
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
+  color: #666666;  
+}
+
+.nav-section {
+  position: relative; 
+  height: 5vh;
+  line-height: 5vh;
+  padding-left: 15%;
+  list-style: none;
+  text-align: left;
+  font-size: 18px;
+  color: #666666;
+}
+
+.nav-page {
+  list-style: none;
+}
+
+.nav-page-link {
+  position: relative; 
+  display: inline-block;
+  width: 80%;
+  height: 5vh;
+  line-height: 5vh;
+  text-align: left;
+  text-decoration: none;
+  color: #666666;
+}
+
+ .nav-page-link:hover {
+  color: #000;
+  cursor: pointer;
+ }
+
+ .content-area {
+  position: relative; 
+  width: 80vw;
+  height: 100vh; 
+  margin-left: 20vw;
+ }
+
+ .content {
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
+  margin-left: 10%;
+  border: none;
+ }

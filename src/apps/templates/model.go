@@ -1,6 +1,6 @@
-package folderTemplates
+package templates
 
-type FolderTempalte struct {
+type template struct {
 	Name       string       `json:"Name"`
 	FolderTree []FolderTree `json:"FolderTree"`
 }
