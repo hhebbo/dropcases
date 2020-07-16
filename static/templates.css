@@ -17,13 +17,40 @@
   width: 85vw;
 }
 
+.internal-templates-main-area {
+  position: relative;
+  width: 85vw;
+}
+
 .templates-page-header {
   position: relative;
   width: 75%;
   height: 15vh;
 }
 
+
+.internal-templates-page-header {
+  position: relative;
+  width: 75%;
+  height: 15vh;
+  padding-top: 5vh;
+}
+
 .template-header {
+  position: relative;
+  height: 100%;
+  line-height: 7vh;
+  padding-left: 3vw;
+  font-weight: 500;
+  font-size: 25px;
+  color: #000000;
+  /* font-family: Futura; */
+  justify-content: space-between;
+  white-space: nowrap;
+  /* background-color: red; */
+}
+
+.internal-template-header {
   position: relative;
   height: 100%;
   line-height: 7vh;
@@ -61,6 +88,13 @@
   height: 100%;
 }
 
+.template-block-info-area-internal-template {
+  position: relative;
+  float: left;
+  width: 80%;
+  height: 100%;
+}
+
 .template-block-name {
   position: relative;
   display: block;
@@ -74,6 +108,15 @@
   color: #28313c;
   font-size: 14px;
   color: #667280;
+}
+
+.template-block-disc-internal-template {
+  position: relative;
+  display: block;
+  color: #28313c;
+  font-size: 14px;
+  color: #667280;
+  padding-left: 3vw;
 }
 
 .template-info-button-area {
@@ -115,6 +158,12 @@
   top:0;
   padding-top: 240px;
   padding-left: 200px;
+}
+
+.internal-template-button {
+  position:absolute;
+  padding-top: 5vh;
+  padding-left: 41vh;
 }
 
 .button {
@@ -237,5 +286,9 @@
   content: "";
   clear: both;
   display: table;
+}
+
+.template-block-permissions {
+  padding-left: 5vh;
 }
 

@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/templates.css" />
+  </head>
+
+  <body class="page-container">
+    <div class="side-area">
+      <div class="title">
+        <svg class="logo">
+          <path d="M8 2.4l8 5.1-8 5.1-8-5.1 8-5.1zm16 0l8 5.1-8 5.1-8-5.1 8-5.1zM0 17.7l8-5.1 8 5.1-8 5.1-8-5.1zm24-5.1l8 5.1-8 5.1-8-5.1 8-5.1zM8 24.5l8-5.1 8 5.1-8 5.1-8-5.1z"></path>
+        </svg>
+      </div>
+
+      <div class="nav-items">
+        <li class="nav-section">
+          <a href="/home" class="nav-page-link">Home</a>
+        </li>
+        <li class="nav-section-title">Files</li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link-black" >All files</a>
+        </li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link">Shared</a>
+        </li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link">File requests</a>
+        </li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link">Deleted files</a>
+        </li>
+        <li class="nav-section-title">Tools</li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link">Paper</a>
+        </li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link">Transfer</a>
+        </li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link">Showcase</a>
+        </li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link">App Center</a>
+        </li>
+        <li class="nav-section">
+          <a href="" class="nav-page-link">Tasks</a>
+        </li>
+        <!-- <li class="nav-section">
+          <a href="/templates" class="nav-page-link">Templates</a>
+        </li> -->
+      </div>
+    </div>
+
+    <div class="internal-templates-main-area">
+        <div class="internal-templates-page-header">
+            <div>
+                <span class="template-header">Internal Project Template</span>
+                <span class="template-block-disc-internal-template">Use this template for collaboration with team members within the company. Security settings have been pre-set to restrict sharing outside the company.</span>
+            </div>
+            
+        </div>
+
+        <div class="border-line"></div>
+
+        <div class="template-block">
+            <div class="template-block-info-area-internal-template">
+                <span class="template-block-name">
+                    <b>Provide a name for your project: </b>
+                    <input type="text" id="project-name" name="project-name"><br><br>
+                </span>
+                <span class="template-block-group">
+                    <b>Select your Project Group: </b>
+                    <select name="groups" id="groups-select">
+                        <option value="group1">Engineering</option>
+                        <option value="group2">Design</option>
+                      </select>
+                </span>
+                <span class="template-block-permissions">
+                    <b>Permissions</b>
+                    <select name="permissions" id="permissions-select">
+                        <option value="group1">Read-Only</option>
+                        <option value="group2">Read & Write</option>
+                      </select>
+                </span>
+                <div class="internal-template-button">
+                    <button type="button" class="button" onclick="window.location.href='/templates'"><b>Create Template</b></button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
