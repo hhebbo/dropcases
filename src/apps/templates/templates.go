@@ -16,7 +16,7 @@ func GetRoutes(router *gin.Engine) *gin.Engine {
 }
 
 func CreateFoldersFromTemplate() {
-	projectName := "2"
+	projectName := "3"
 	template := "internal"
 	adminMemberId := config.GetValue(appConfig.DROPCASES_ADMIN_MEMBER_ID)
 	group1Id := "g:65b86a75b6caefa000000000000001e7"
@@ -38,14 +38,14 @@ func CreateFoldersFromTemplate() {
 		var toPath = "/" + projectName + "/"
 
 		fmt.Println(f.Name)
-		if f.Type == "folder" {
+		if f.Type == fileFolder.FileFolderTypeFolder {
 			folderPath := toPath + strings.Title(strings.Join(pathSegments[3:], "/"))
 			fileFolder.CreateFolder(folderPath, false, adminMemberId)
 		}
 
-		if f.Type == "file" {
+		if f.Type == fileFolder.FileFolderTypeFile {
 			filePath := toPath + f.Name
-			fileFolder.Copy(fromPath+f.Name, filePath, true, true, true, adminMemberId)
+			fileFolder.Copy(fromPath+"/"+f.Name, filePath, true, false, true, adminMemberId)
 		}
 
 	}
