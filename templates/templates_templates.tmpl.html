@@ -66,7 +66,7 @@
             </span>
           </div>
           <div class="template-info-button-area">
-            <button type="button" class="template-block-button" onclick="window.location.href='/initial-project-template'">Create from Template</button>
+            <button id="template-button-1" type="button" class="template-block-button" >Create from Template</button>
           </div>
         </div>
 
@@ -104,6 +104,76 @@
 
         <div class="border-line"></div>
     </div>
+
+    <div id="template-options-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+      
+        <div class="model-header">
+          <h2>Internal Project Template</h2>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-subform">
+            <label class="model-subform-title">Project Name: </label>
+            <span>
+              <input type="text"  placeholder="Project Name" />
+            </span>
+          </div>
+          <div class="modal-subform">
+            <label class="model-subform-title">Group: </label>
+            <span>
+              <select name="groups" id="groups-select">
+                        <option value="group1">Engineering</option>
+                        <option value="group2">Design</option>
+                      </select>
+            </span>
+          </div>
+          <div class="modal-subform">
+            <label class="model-subform-title">Permissions: </label>
+            <span>
+              <select name="permissions" id="permissions-select">
+                <option value="group1">Read-Only</option>
+                <option value="group2">Read & Write</option>
+              </select>
+            </span>
+          </div>
+        </div>
+
+        <div class="internal-template-button">
+          <button type="button" class="button" onclick="window.location.href='/templates'"><b>Create Template</b></button>
+        </div>
+      </div>
+    
+    </div>
+
+    <script>
+      var modal = document.getElementById("template-options-modal");
+  
+      // Get the button that opens the modal
+      var btn = document.getElementById("template-button-1");
+  
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+  
+      // When the user clicks on the button, open the modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+  
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+  
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
 
   </body>
 </html>
