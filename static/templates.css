@@ -13,41 +13,100 @@
 }
 
 .templates-main-area {
-  display: flex;
-  flex-direction: column;
-}
-
-.templates-title {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 96px;
+  position: relative;
+  width: 85vw;
 }
 
 .templates-page-header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  white-space: nowrap;
-  left: 260px;
-  min-width: 744px;
-  background: #ffffff;
-  padding: 40px 0 0 40px;
-  height: 56px;
+  position: relative;
+  width: 75%;
+  height: 15vh;
 }
 
 .template-header {
-  font-size: 22px;
-  line-height: 22px;
-  font-weight: 500;
-  color: #000000;
-  font-family: Futura;
   position: relative;
+  height: 100%;
+  line-height: 7vh;
+  padding-left: 3vw;
+  font-weight: 500;
+  font-size: 25px;
+  color: #000000;
+  /* font-family: Futura; */
+  justify-content: space-between;
+  white-space: nowrap;
+  /* background-color: red; */
+}
+
+.border-line {
+  position: relative; 
+  width: 77%;
+  margin-left: 2vw;
+  border-top: solid 1px #e6e8eb;
+}
+
+.template-block {
+  position: relative;
+  width: 75%;
+  height: 6vh;
+  margin-left: 2vw;
+  padding: 3vh;
+  /* border-top: solid 1px #e6e8eb; */
+  /* background-color: green; */
+}
+
+.template-block-info-area {
+  position: relative;
+  float: left;
+  width: 80%;
+  height: 100%;
+}
+
+.template-block-name {
+  position: relative;
+  display: block;
+  margin-bottom: 1vh;
+  color: #28313c;
+}
+
+.template-block-disc {
+  position: relative;
+  display: block;
+  color: #28313c;
+  font-size: 14px;
+  color: #667280;
+}
+
+.template-info-button-area {
+  position: relative;
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+.template-block-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 80%;
+  height: 60%;
+  background-color: #0F2481;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+}
+
+.template-block-button:hover {
+  background-color: #1f409d;
+  cursor: pointer;
 }
 
 .main-area {
   position: relative;
   flex-grow: 1;
-
 }
 
 .template-button {
@@ -68,6 +127,11 @@
   display: inline-block;
   font-size: 14px;
   margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1f409d;
   cursor: pointer;
 }
 
@@ -174,3 +238,4 @@
   clear: both;
   display: table;
 }
+
