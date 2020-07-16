@@ -16,7 +16,7 @@ func getRoutes(router *gin.Engine) *gin.Engine {
 	})
 
 	router.GET(TEMPLATES_URL, func(c *gin.Context) {
-		CreateFoldersFromTemplate()
+		//CreateFoldersFromTemplate()
 
 		c.HTML(
 			http.StatusOK,
