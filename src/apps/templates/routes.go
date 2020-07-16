@@ -27,11 +27,11 @@ func getRoutes(router *gin.Engine) *gin.Engine {
 		CreateFoldersFromTemplate()
 		CreateFoldersFromTemplate()
 
-		// c.HTML(
-		// 	http.StatusOK,
-		// 	"templates_internal_template.tmpl.html",
-		// 	gin.H{},
-		// )
+		c.HTML(
+			http.StatusOK,
+			"templates_templates.tmpl.html",
+			gin.H{},
+		)
 	})
 
 	return router

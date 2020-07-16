@@ -310,11 +310,59 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 2.5vh 5vh;
   border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
-  height: 40%;
+  width: 25vw; /* Could be more or less, depending on screen size */
+  height: 50vh;
+  /* background-color: red; */
+}
+
+.model-header {
+  display: block;
+  margin-bottom: 5vh;
+}
+
+.modal-subform {
+  height: 10vh;
+  /* background-color: green; */
+}
+
+.modal-subform-title {
+  display: block;
+  margin-bottom: 1vh;
+}
+
+.modal-text-box {
+  width: 25vw;
+  height: 4vh;
+  padding-left: 10px;
+}
+
+.modal-select {
+  width: 25vw;
+  height: 4vh;
+  padding-left: 10px;
+}
+
+.modal-button-container {
+  float: right;
+}
+
+.modal-button {
+  width: 10vw;
+  height: 4vh;
+  background-color: #0F2481;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 16;
+}
+
+.modal-button:hover {
+  background-color: #1f409d;
+  cursor: pointer;
 }
 
 /* The Close Button */
@@ -323,6 +371,9 @@
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: relative;
+  margin-top: -1.5vh;
+  margin-right: -3vh;
 }
 
 .close:hover,

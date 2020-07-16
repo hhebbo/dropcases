@@ -16,18 +16,15 @@ func GetRoutes(router *gin.Engine) *gin.Engine {
 }
 
 func CreateFoldersFromTemplate() {
-	projectName := "3"
+	projectName := "4"
 	template := "internal"
 	adminMemberId := config.GetValue(appConfig.DROPCASES_ADMIN_MEMBER_ID)
 	group1Id := "g:65b86a75b6caefa000000000000001e7"
-	group2Id := "g:65b86a75b6caefa000000000000001ee"
 
 	tf := teamFolder.Create(projectName)
 	var gs []teamFolder.TeamFolderGroup
 	g1 := teamFolder.TeamFolderGroup{group1Id, teamFolder.GroupAccessLevelEditor}
 	gs = append(gs, g1)
-	g2 := teamFolder.TeamFolderGroup{group2Id, teamFolder.GroupAccessLevelEditor}
-	gs = append(gs, g2)
 	teamFolder.AddGroups(tf.Id, gs, false, adminMemberId)
 
 	fromPath := "/Templates/" + template
