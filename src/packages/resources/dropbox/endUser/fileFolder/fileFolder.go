@@ -7,6 +7,10 @@ func CreateFolder(path string, autoRename bool, userTeamMemberId string) FileFol
 	return folder
 }
 
+func CreateFolderBatch(path []string, autoRename bool, userTeamMemberId string) {
+	createBatch(path, autoRename, userTeamMemberId)
+}
+
 func ShareFolder(path string, inviteeTeamMemberId string, accessLevel string, userTeamMemberId string) {
 	share(path, inviteeTeamMemberId, accessLevel, userTeamMemberId)
 }

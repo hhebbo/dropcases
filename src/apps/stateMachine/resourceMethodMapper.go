@@ -3,9 +3,9 @@ package stateMachine
 import (
 	"time"
 
-	"github.com/heroku/go-getting-started/src/packages/resources/dropbox/business/group"
-	"github.com/heroku/go-getting-started/src/packages/resources/dropbox/endUser/fileFolder"
-	"github.com/heroku/go-getting-started/src/packages/resources/dropbox/endUser/paper"
+	"github.com/hhebbo/dropcases/src/packages/resources/dropbox/business/group"
+	"github.com/hhebbo/dropcases/src/packages/resources/dropbox/endUser/fileFolder"
+	"github.com/hhebbo/dropcases/src/packages/resources/dropbox/endUser/paper"
 )
 
 const (

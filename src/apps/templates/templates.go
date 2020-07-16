@@ -1,6 +1,7 @@
 package templates
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/gin-gonic/gin"
@@ -15,21 +16,37 @@ func GetRoutes(router *gin.Engine) *gin.Engine {
 }
 
 func CreateFoldersFromTemplate() {
-	projectName := "MediaPro Video Production"
-	template := "Workflow1"
+	projectName := "2"
+	template := "internal"
 	adminMemberId := config.GetValue(appConfig.DROPCASES_ADMIN_MEMBER_ID)
-	groupId := "g:65b86a75b6caefa00000000000000dc5"
+	group1Id := "g:65b86a75b6caefa000000000000001e7"
+	group2Id := "g:65b86a75b6caefa000000000000001ee"
 
 	tf := teamFolder.Create(projectName)
 	var gs []teamFolder.TeamFolderGroup
-	g := teamFolder.TeamFolderGroup{groupId, teamFolder.GroupAccessLevelEditor}
-	gs = append(gs, g)
+	g1 := teamFolder.TeamFolderGroup{group1Id, teamFolder.GroupAccessLevelEditor}
+	gs = append(gs, g1)
+	g2 := teamFolder.TeamFolderGroup{group2Id, teamFolder.GroupAccessLevelEditor}
+	gs = append(gs, g2)
 	teamFolder.AddGroups(tf.Id, gs, false, adminMemberId)
 
-	folders, _ := fileFolder.List("/FolderTemplates/"+template, adminMemberId)
+	fromPath := "/Templates/" + template
+	folders, _ := fileFolder.List(fromPath, adminMemberId)
+
 	for _, f := range folders[1:] {
 		var pathSegments = strings.Split(f.Path, "/")
-		var path = "/" + projectName + "/" + strings.Title(strings.Join(pathSegments[3:], "/"))
-		fileFolder.CreateFolder(path, false, adminMemberId)
+		var toPath = "/" + projectName + "/"
+
+		fmt.Println(f.Name)
+		if f.Type == "folder" {
+			folderPath := toPath + strings.Title(strings.Join(pathSegments[3:], "/"))
+			fileFolder.CreateFolder(folderPath, false, adminMemberId)
+		}
+
+		if f.Type == "file" {
+			filePath := toPath + f.Name
+			fileFolder.Copy(fromPath+f.Name, filePath, true, true, true, adminMemberId)
+		}
+
 	}
 }
